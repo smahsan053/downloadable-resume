@@ -1,0 +1,19 @@
+{
+  "name": "editable-resume",
+  "version": "1.0.0",
+  "description": "A web app that lets users create and customize their resumes with real-time editing. Users can dynamically add skills, hobbies, and competencies and directly edit the resume content by double-clicking.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "html2pdf.js": "^0.9.0"
+  }
+}

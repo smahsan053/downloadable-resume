@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Resume Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Editable Resume Form</h1>
+
+      <form id="resume-form" action="#" method="post">
+        <!-- Personal Information Section -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="e.g., Ahsan Ali"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e.g., example@example.com"
+            required
+          />
+
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g., +92-123-4567890"
+            required
+          />
+
+          <label for="profile-pic">Profile Picture URL:</label>
+          <input
+            type="text"
+            id="profile-pic"
+            name="profile-pic"
+            placeholder="e.g., https://example.com/profile.jpg"
+          />
+        </fieldset>
+
+        <!-- Education Section -->
+        <fieldset>
+          <legend>Education</legend>
+          <label for="degree">Degree:</label>
+          <input
+            type="text"
+            id="degree"
+            name="degree"
+            required
+            placeholder="e.g., Bachelor of Science"
+          />
+
+          <label for="duration">Duration:</label>
+          <input
+            type="text"
+            id="duration"
+            name="duration"
+            required
+            placeholder="e.g., 2018 - 2022"
+          />
+
+          <label for="institution">Institution:</label>
+          <input
+            type="text"
+            id="institution"
+            name="institution"
+            required
+            placeholder="e.g., University of Example"
+          />
+        </fieldset>
+
+        <!-- Work Experience Section -->
+        <fieldset>
+          <legend>Work Experience</legend>
+          <label for="job-title">Job Title:</label>
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            required
+            placeholder="e.g., Software Engineer"
+          />
+
+          <label for="job-duration">Duration:</label>
+          <input
+            type="text"
+            id="job-duration"
+            name="job-duration"
+            required
+            placeholder="e.g., June 2020 - Present"
+          />
+
+          <label for="company">Company:</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            required
+            placeholder="e.g., Tech Solutions Inc."
+          />
+
+          <label for="job-description">Description:</label>
+          <textarea
+            id="job-description"
+            name="job-description"
+            rows="4"
+            required
+            placeholder="e.g., Developed and maintained web applications..."
+          ></textarea>
+        </fieldset>
+
+        <!-- Skills Section -->
+        <fieldset>
+          <legend>Skills</legend>
+          <label for="skills">Skills:</label>
+          <div id="skills-container">
+            <input type="text" class="skill-input" placeholder="e.g., HTML" />
+          </div>
+          <button type="button" onclick="addSkill()">Add Skill</button>
+        </fieldset>
+
+        <!-- Projects Section -->
+        <fieldset>
+          <legend>Projects</legend>
+          <label for="project-name">Project Name:</label>
+          <input
+            type="text"
+            id="project-name"
+            name="project-name"
+            required
+            placeholder="e.g., Portfolio Website"
+          />
+
+          <label for="project-description">Project Description:</label>
+          <textarea
+            id="project-description"
+            name="project-description"
+            rows="4"
+            required
+            placeholder="e.g., A personal portfolio website built with HTML, CSS, and JavaScript."
+          ></textarea>
+        </fieldset>
+
+        <!-- Hobbies Section -->
+        <fieldset>
+          <legend>Hobbies</legend>
+          <label for="hobbies">Hobbies:</label>
+          <div id="hobbies-container">
+            <input
+              type="text"
+              class="hobby-input"
+              placeholder="e.g., Badminton"
+            />
+          </div>
+          <button type="button" onclick="addHobby()">Add Hobby</button>
+        </fieldset>
+
+        <!-- Personal Competencies Section -->
+        <fieldset>
+          <legend>Personal Competencies</legend>
+          <label for="competencies">Competencies:</label>
+          <div id="competencies-container">
+            <input
+              type="text"
+              class="competency-input"
+              placeholder="e.g., Ability to work in a fast-paced environment to meet deadlines."
+            />
+          </div>
+          <button type="button" onclick="addCompetency()">
+            Add Competency
+          </button>
+        </fieldset>
+
+        <!-- References Section -->
+        <fieldset>
+          <legend>References</legend>
+          <label for="references">References:</label>
+          <textarea
+            id="references"
+            name="references"
+            rows="3"
+            placeholder="Available upon request"
+          ></textarea>
+        </fieldset>
+
+        <!-- Username Section -->
+        <fieldset>
+          <legend>Username</legend>
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="e.g., ahsanali"
+            required
+          />
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Generate Resume</button>
+      </form>
+
+      <!-- Resume Output Section -->
+      <div id="resume-output" class="resume-output"></div>
+      <p id="unique-url"></p>
+      <button id="share-button">Share Resume</button>
+      <button id="download-resume">Download Resume as PDF</button>
+    </div>
+
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
