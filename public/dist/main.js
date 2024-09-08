@@ -233,9 +233,12 @@ function generateResume() {
             downloadResume.style.display = 'block';
         }
         const uniqueURL = generateUniqueURL(username);
+        console.log(uniqueURL);
         const urlElement = document.getElementById('unique-url');
+        console.log(urlElement);
         if (urlElement) {
             urlElement.textContent = `Your resume can be viewed at: ${uniqueURL}`;
+            console.log(urlElement);
         }
         addEditableListeners();
     }
