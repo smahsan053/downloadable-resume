@@ -256,13 +256,10 @@ function generateResume(): void {
 
     // Generate unique URL and display it
     const uniqueURL = generateUniqueURL(username);
-    console.log(uniqueURL);
 
     const urlElement = document.getElementById('unique-url') as HTMLParagraphElement | null;
-    console.log(urlElement);
     if (urlElement) {
       urlElement.textContent = `Your resume can be viewed at: ${uniqueURL}`;
-      console.log(urlElement);
     }
 
     // Add event listeners for making fields editable on double-click
@@ -275,6 +272,7 @@ function generateResume(): void {
 // Add event listeners for new buttons
 document.getElementById('share-button')?.addEventListener('click', () => {
   const urlElement = document.getElementById('unique-url') as HTMLParagraphElement | null;
+  
   if (urlElement) {
     navigator.clipboard.writeText(urlElement.textContent || '')
       .then(() => alert('Resume URL copied to clipboard'))
